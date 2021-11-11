@@ -1,13 +1,14 @@
 const fs = require('fs');
 
 const camelCaseName = require('../lib/camel_case_name');
-const createDir = require('../lib/create_dir');
+const createProjectDir = require('../lib/create_project_dir');
 const createFolders = require('../lib/create_folders');
 
 
 const createFunctionAndTest = async (name) => {
-	if (name === undefined) return "Error. Please enter";
-	createDir(name);
+	const projectName = name
+	if (projectName === undefined) return "Error. Please enter";
+	createProjectDir(name);
 	const functionName = camelCaseName(name);
 	await createFolders(name);
 	const testContent = `const ${functionName} = require('../lib/${name}');

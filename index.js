@@ -1,3 +1,3 @@
-const createFunctionAndTest = require('./lib/create_function_and_test');
+const createFunctionAndTest = require('./bin/create_function_and_test');
 
-createFunctionAndTest(process.argv[2], process.argv[3]);
+console.log(createFunctionAndTest(process.argv[2]));

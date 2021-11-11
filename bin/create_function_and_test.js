@@ -1,44 +1,16 @@
 const fs = require('fs');
 
-const camelCaseName = require('../lib/camel_case_name');
-const createProjectDir = require('../lib/create_project_dir');
-const createFolders = require('../lib/create_folders');
-
+const createProjectDir = require('../lib/create_project_dirs');
+const createTestAndLibDir = require('../lib/create_test_and_lib_dir');
+const templateFileContent = require('../lib/template_file_content');
 
 const createFunctionAndTest = async (name) => {
-	const projectName = name
+	const projectName = name;
 	if (projectName === undefined) return "Error. Please enter";
 	createProjectDir(name);
-	const functionName = camelCaseName(name);
-	await createFolders(name);
-	const testContent = `const ${functionName} = require('../lib/${name}');
-
-
-describe('', () => {
-	test('should ', () => {
-		expect(${functionName}()).toBe(0)
-	});
-});`
-	const functionContent = `// What are we trying to do?
-
-const ${functionName} = () => {
-	return 0;
-};
-
-module.exports = ${functionName};`
-	const packageJson = `{
-		"name": "${name}",
-		"version": "1.0.0",
-		"main": "index.js",
-		"license": "MIT",
-		"dependencies": {
-		  "jest": "^27.3.1"
-		},
-		"scripts": {
-			"test": "jest --watch --coverage"
-		}
-	  }`
-	fs.writeFile(`${name}/__test__/${name}.test.js`, testContent, err => {
+	await createTestAndLibDir(name);
+	const content = await templateFileContent(name);
+	await fs.writeFile(`${name}/__test__/${name}.test.js`, content.test, err => {
 		if (err) {
 			console.error(err);
 			return
@@ -46,7 +18,7 @@ module.exports = ${functionName};`
 			console.log(`Created __test__/${name}.test.js!`)
 		}
 	});
-	fs.writeFile(`${name}/lib/${name}.js`, functionContent, err => {
+	await fs.writeFile(`${name}/lib/${name}.js`, content.function, err => {
 		if (err) {
 			console.error(err);
 			return;
@@ -55,14 +27,14 @@ module.exports = ${functionName};`
 		}
 	});
 
-	fs.writeFile(`${name}/package.json`, packageJson, err => {
+	fs.writeFile(`${name}/package.json`, content.packageJson, err => {
 		if (err) {
 			console.error(err);
 		} else {
 			console.log('Created package.json!');
 		}
 	});
-	return "Files written!"
+	console.log("Files written!");
 }
 
 module.exports = createFunctionAndTest;

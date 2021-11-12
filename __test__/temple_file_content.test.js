@@ -14,6 +14,6 @@ describe('', () => {\n
   test('should ', () => {
     expect(projectName()).toBe(0);
   });
-});`)
-    })
-})
+});`);
+    });
+});

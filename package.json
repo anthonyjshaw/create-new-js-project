@@ -1,12 +1,16 @@
 {
-	"name": "hey",
+	"name": "create-function-and-test",
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
-	"scripts": {
-		"test": "jest --watch --coverage"
+	"bin": {
+		"create-function-and-test": "bin/create_function_and_test.js"
 	},
-	"devDependencies": {
+	"scripts": {
+		"test": "jest --watch"
+	},
+	"devDependencies": {},
+	"dependencies": {
 		"jest": "^27.3.1"
 	}
 }

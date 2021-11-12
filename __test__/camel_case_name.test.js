@@ -1,4 +1,4 @@
-const camelCaseName = require('../../lib/camel_case_name');
+const camelCaseName = require('../lib/camel_case_name');
 
 describe('Camel Case Name', () => {
 	test('should change underscores to camelCase', () => {

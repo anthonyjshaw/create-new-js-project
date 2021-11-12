@@ -45,6 +45,5 @@ const createFunctionAndTest = async () => {
 }
 
 // createFunctionAndTest();
-
-// process.exit(0);
 module.exports = createFunctionAndTest;
+process.exit(0);

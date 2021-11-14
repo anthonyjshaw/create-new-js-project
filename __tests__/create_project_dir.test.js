@@ -3,14 +3,14 @@ const fs = require('fs');
 
 
 afterAll(() => {
-	fs.rmdirSync('./__test__example', {recursive: true, force: true})
+	fs.rmdirSync('./__tests__/example', {recursive: true, force: true})
 })
 
 
 describe('createProjectDir', () => {
 	test('should create directory marked example', async () => {
-	 	createProjectDir('example');
-		const dir = './__test__/example/';
+	 	createProjectDir('__tests__/example');
+		const dir = './__tests__/example/';
 		await expect(fs.existsSync(dir)).toBe(true);
 	});
 });

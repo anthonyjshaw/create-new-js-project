@@ -1,5 +1,5 @@
 {
-	"name": "create-function-and-test",
+	"name": "create-js-project",
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
@@ -7,7 +7,8 @@
 		"create-js-project": "bin/cli.js"
 	},
 	"scripts": {
-		"test": "jest --watch"
+		"test": "jest --watch",
+		"test-repo": "jest --coverage"
 	},
 	"devDependencies": {},
 	"dependencies": {

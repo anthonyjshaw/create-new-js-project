@@ -5,7 +5,7 @@ afterAll(() => {
 	fs.rmdirSync('./__test__/example1', {recursive: true, force: true});
 })
 
-describe('createProjectDir', () => {
+describe('createTestAndLibDir', () => {
 	test('should create a directory marked test', async () => {
 	 	createTestAndLibDir('./__test__/example1')
 		const dir = './__test__/example1/__test__';

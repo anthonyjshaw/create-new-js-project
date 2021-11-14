@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 afterAll(() => {
-	
+	fs.rmdirSync('./test_project', {recursive: true, force: true})
 })
 
 describe('createJSProject', () => {

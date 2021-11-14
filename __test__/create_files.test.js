@@ -7,7 +7,7 @@ afterAll(() => {
 	const testProjects = ['test_project', 'test_project1', 'test_project2'];
 	testProjects.forEach(e => {
 		fs.rmdirSync(`./${e}`, { recursive: true, force: true });
-	})
+	});
 })
 
 describe('createFiles', () => {

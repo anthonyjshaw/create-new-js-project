@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"license": "MIT",
 	"bin": {
-		"create-function-and-test": "bin/cli.js"
+		"create-js-project": "bin/cli.js"
 	},
 	"scripts": {
 		"test": "jest --watch"

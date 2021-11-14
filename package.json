@@ -16,7 +16,10 @@
 	},
 	"keywords": [
 		"JavaScript",
-		"scaffold"
+		"scaffold",
+		"cli",
+		"template creator",
+		"dev tool"
 	],
 	"scripts": {
 		"test": "jest --watch",

@@ -1,17 +1,22 @@
 {
-	"name": "create-js-project",
-	"version": "1.0.0",
+	"name": "create-new-js-project",
+	"version": "1.0.2",
+	"description": "Create a new JavaScript project with jest installed",
 	"main": "index.js",
 	"license": "MIT",
 	"bin": {
-		"create-js-project": "bin/cli.js"
+		"create-new-js-project": "bin/cli.js"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/anthonyjshaw/create-js-project.git"
+	},
+	"dependencies": {
+		"jest": "^27.3.1"
+	},
+	"keywords": ["JavaScript", "scaffold"],
 	"scripts": {
 		"test": "jest --watch",
 		"test-repo": "jest --coverage"
-	},
-	"devDependencies": {},
-	"dependencies": {
-		"jest": "^27.3.1"
 	}
 }

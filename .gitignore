@@ -5,6 +5,6 @@ node_modules
 
 # Test examples
 test_projects
-test_project
+test_project*
 example
 example-project

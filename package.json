@@ -14,9 +14,15 @@
 	"dependencies": {
 		"jest": "^27.3.1"
 	},
-	"keywords": ["JavaScript", "scaffold"],
+	"keywords": [
+		"JavaScript",
+		"scaffold"
+	],
 	"scripts": {
 		"test": "jest --watch",
 		"test-repo": "jest --coverage"
+	},
+	"devDependencies": {
+		"eslint": "^8.2.0"
 	}
 }

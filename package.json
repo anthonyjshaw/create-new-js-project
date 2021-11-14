@@ -1,10 +1,11 @@
 {
-	"name": "create-js-project",
-	"version": "1.0.0",
+	"name": "create-new-js-project",
+	"version": "1.0.1",
+	"description": "Create a new JavaScript project with jest installed",
 	"main": "index.js",
 	"license": "MIT",
 	"bin": {
-		"create-js-project": "bin/cli.js"
+		"create-new-js-project": "bin/cli.js"
 	},
 	"scripts": {
 		"test": "jest --watch",

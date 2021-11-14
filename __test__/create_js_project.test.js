@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 afterAll(() => {
-
+	
 })
 
 describe('createJSProject', () => {
@@ -14,7 +14,11 @@ describe('createJSProject', () => {
 		expect(await createJSProject()).toBe(error);
 	});
 
-	test('should return error if project already exists', () => {
+	test('should return error if project already exists', async () => {
+		const projectName = 'test_project'
+		createJSProject(projectName);
+		const error = `Oops! There's already a project called "${projectName}". \nTo access it, please enter the following command in your terminal:\n\n\`cd ${projectName}\`\nTo delete it, please enter:\`rm -rf ${projectName}\``
+		expect( await createJSProject(projectName)).toBe(error);
 		
 	})
 })

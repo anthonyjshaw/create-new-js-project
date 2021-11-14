@@ -4,7 +4,10 @@ const templateFileContent = require("../lib/template_file_content");
 const createTestAndLibDir = require("../lib/create_test_and_lib_dir");
 
 afterAll(() => {
-	const testProjects = ['test_project', 'test_project1', 'test_project2'];
+	const testProjects = ['test_project'];
+	for (let i = 1; i < 4; i++ ) {
+		testProjects.push(`test_project${i}`);
+	}
 	testProjects.forEach(e => {
 		fs.rmdirSync(`./${e}`, { recursive: true, force: true });
 	});
@@ -38,4 +41,12 @@ describe('createFiles', () => {
 		expect(fs.existsSync(packageJson)).toBe(true);
 	});
 	
+	test('should create a .gitignore', () => {
+		const projectName = 'test_project3';
+		createTestAndLibDir(projectName);
+		const content = templateFileContent(projectName);
+		createFiles(projectName, content);
+		const gitignore = `${projectName}/.gitignore`;
+		expect(fs.existsSync(gitignore)).toBe(true);
+	});
 })

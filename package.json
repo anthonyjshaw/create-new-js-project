@@ -1,9 +1,10 @@
 {
 	"name": "create-new-js-project",
 	"version": "1.0.2",
-	"description": "Create a new JavaScript project with jest installed",
+	"description": "Create a new JavaScript project with jest installed.",
 	"main": "index.js",
 	"license": "MIT",
+	"author": "Anthony Shaw",
 	"bin": {
 		"create-new-js-project": "bin/cli.js"
 	},

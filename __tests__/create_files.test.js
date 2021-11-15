@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const createFiles = require("../lib/create_files");
 const fs = require('fs');
 const templateFileContent = require("../lib/template_file_content");
@@ -28,7 +29,7 @@ describe('createFiles', () => {
 		createTestAndLibDir(projectName);
 		const content = templateFileContent(projectName);
 		createFiles(projectName, content);
-		const projectTestFile = `${projectName}/__test__/${projectName}.test.js`;
+		const projectTestFile = `${projectName}/__tests__/${projectName}.test.js`;
 		expect(fs.existsSync(projectTestFile)).toBe(true);
 	});
 

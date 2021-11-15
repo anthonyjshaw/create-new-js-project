@@ -1,9 +1,10 @@
 {
 	"name": "create-new-js-project",
 	"version": "1.0.2",
-	"description": "Create a new JavaScript project with jest installed",
+	"description": "Create a new JavaScript project with jest installed.",
 	"main": "index.js",
 	"license": "MIT",
+	"author": "Anthony Shaw",
 	"bin": {
 		"create-new-js-project": "bin/cli.js"
 	},
@@ -14,9 +15,18 @@
 	"dependencies": {
 		"jest": "^27.3.1"
 	},
-	"keywords": ["JavaScript", "scaffold"],
+	"keywords": [
+		"JavaScript",
+		"scaffold",
+		"cli",
+		"template creator",
+		"dev tool"
+	],
 	"scripts": {
 		"test": "jest --watch",
 		"test-repo": "jest --coverage"
+	},
+	"devDependencies": {
+		"eslint": "^8.2.0"
 	}
 }

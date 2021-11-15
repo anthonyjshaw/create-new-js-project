@@ -16,13 +16,13 @@ Create a basic node project with jest installed.
 
    ```<your-project-name>``` 
 
-with the name of your project.
+   with the name of your project.
 
 4. Finally, enter:
    
    ```cd <your-project-name>```
 
-and edit the files in your code editor of choice.
+   and edit the files in your code editor of choice.
 
 ## Commands
 

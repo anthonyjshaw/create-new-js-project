@@ -7,6 +7,8 @@ Create a basic node project with jest installed.
 1. First, install the package globally by copy and pasting the following into your terminal:
    
    ```npm i create-new-js-project -g```
+   
+   You should be able to use the Command Line Interface.
 
 2. Next, to create a new project, type the command: 
 

@@ -28,4 +28,5 @@ Create a basic node project with jest installed.
 
 ## Commands
 
-- ```yarn test``` will run ```jest --watch```, allowing jest to track any updates to your test.
+- ```yarn test``` will run ```jest --watch```, allowing jest to track any updates to your test file
+- .

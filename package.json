@@ -1,6 +1,6 @@
 {
 	"name": "create-new-js-project",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Create a new JavaScript project with jest installed.",
 	"main": "index.js",
 	"license": "MIT",

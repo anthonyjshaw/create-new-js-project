@@ -6,7 +6,7 @@ const createTestAndLibDir = require("../lib/create_test_and_lib_dir");
 
 afterAll(() => {
 	const testProjects = ['test_project'];
-	for (let i = 1; i < 4; i++ ) {
+	for (let i = 1; i < 5; i++ ) {
 		testProjects.push(`test_project${i}`);
 	}
 	testProjects.forEach(e => {
@@ -50,4 +50,13 @@ describe('createFiles', () => {
 		const gitignore = `${projectName}/.gitignore`;
 		expect(fs.existsSync(gitignore)).toBe(true);
 	});
+
+	test('should create a Readme file', () => {
+		const projectName = 'test_project4';
+		createTestAndLibDir(projectName);
+		const content = templateFileContent(projectName);
+		createFiles(projectName, content);
+		const readme = `${projectName}/README.md`;
+		expect(fs.existsSync(readme)).toBe(true);
+	})
 })
